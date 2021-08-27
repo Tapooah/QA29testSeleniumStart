@@ -62,12 +62,14 @@ public class StartSelenium {
 
         //step4 = type password
         WebElement pass = listInputs.get(1);
+        wd.findElement(By.cssSelector("[placeholder='Password']"));
         pass.click();
         pass.clear();
         pass.sendKeys("12345");
 
         //step5 = click button login
         WebElement loginClick = wd.findElement(By.tagName("button"));
+        wd.findElement(By.cssSelector("button"));
         loginClick.click();
     }
 
