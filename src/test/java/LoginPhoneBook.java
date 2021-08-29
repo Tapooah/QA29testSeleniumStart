@@ -19,13 +19,17 @@ public class LoginPhoneBook {
     @Test
     public void loginTest() {
         //1. open login form
+        WebElement logButton = wd.findElement(By.cssSelector("a[href='/login']"));
+        logButton.click();
 
         //2. fill email
-        type(By.cssSelector("[placeholder='Email']"), "ololo@gmail.com");
+        type(By.cssSelector("[placeholder='Email']"), "ololo.tester@gmail.com");
+
         //3. fill pass
-
+        type(By.cssSelector("[placeholder='Password']"), "Ololo_Tester123");
         //4. click login
-
+        WebElement loginAfterType = wd.findElement(By.cssSelector("button:nth-child(4)"));
+        loginAfterType.click();
     }
 
     public void type(By locator, String text) {
