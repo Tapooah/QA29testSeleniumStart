@@ -16,6 +16,7 @@ public class LoginPhoneBook {
         wd.manage().window().maximize();
     }
 
+//by cssSelector
     @Test
     public void loginTest() {
         //1. open login form
@@ -32,7 +33,7 @@ public class LoginPhoneBook {
         loginAfterType.click();
     }
 
-
+//by XPath
     @Test
     public void loginXpathTest() {
         //1. open login form
@@ -48,7 +49,6 @@ public class LoginPhoneBook {
 
     }
 
-
     public void type(By locator, String text) {
         WebElement element = wd.findElement(locator);
         element.click();
@@ -57,3 +57,4 @@ public class LoginPhoneBook {
     }
 
 }
+
