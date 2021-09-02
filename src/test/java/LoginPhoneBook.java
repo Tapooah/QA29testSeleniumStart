@@ -32,6 +32,23 @@ public class LoginPhoneBook {
         loginAfterType.click();
     }
 
+
+    @Test
+    public void loginXpathTest() {
+        //1. open login form
+        WebElement logNavbar = wd.findElement(By.xpath("//*[@href='/login']"));
+        logNavbar.click();
+        //2. fill email
+        type(By.xpath("//*[@placeholder='Email']"), "ololo_tester@gmail.com");
+        //3. fill pass
+        type(By.xpath("//*[@placeholder='Password']"), "Ololo_Tester123");
+        //4. click login
+        WebElement logButton = wd.findElement(By.xpath("//input[1]/following-sibling::button[1]"));
+        logButton.click();
+
+    }
+
+
     public void type(By locator, String text) {
         WebElement element = wd.findElement(locator);
         element.click();
